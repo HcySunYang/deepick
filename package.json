@@ -1,0 +1,22 @@
+{
+  "name": "deepick",
+  "version": "1.0.0",
+  "description": "Pick objects according to the depth of the given pattern",
+  "main": "dist/deepick.js",
+  "scripts": {
+    "dev": "rollup -w -c rollup.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HcySunYang/deepick.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HcySunYang/deepick/issues"
+  },
+  "homepage": "https://github.com/HcySunYang/deepick#readme",
+  "devDependencies": {
+    "rollup": "^0.51.6"
+  }
+}

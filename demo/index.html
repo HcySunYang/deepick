@@ -1,0 +1,75 @@
+<html>
+<head>test</head>
+<body>
+    <script src="../dist/deepick.js"></script>
+    <script>
+        var source = [
+            {
+                id: 1,
+                name: 'hcy',
+                email: 'HcySunYang@outlook.com',
+                ctime: 1473675260,
+                utime: 1501677125,
+                carts: [
+                    {
+                        id: 100,
+                        name: 'Rose',
+                        price: '$9',
+                        ctime: 1372674220,
+                        utime: 1472574020,
+                    },
+                    {
+                        id: 101,
+                        name: 'Lily',
+                        price: '$8',
+                        ctime: 1372674230,
+                        utime: 1472574030,
+                    }
+                ]
+            },
+            {
+                id: 2,
+                name: 'Chun Yang',
+                email: 'sunyang121027.me@gmail.com',
+                ctime: 1483675260,
+                utime: 1521677125,
+                carts: [
+                    {
+                        id: 200,
+                        name: 'candy',
+                        price: '$19',
+                        ctime: 1332373220,
+                        utime: 1412571020,
+                    },
+                    {
+                        id: 201,
+                        name: 'milk',
+                        price: '$80',
+                        ctime: 1322474430,
+                        utime: 1432571130,
+                    }
+                ]
+            }
+        ]
+
+        var partten = [
+            {
+                id: 'id',
+                name: 'name',
+                email: 'email',
+                carts: [
+                    {
+                        id: 'id',
+                        name: 'name',
+                        price: 'price'
+                    }
+                ]
+            }
+        ]
+        
+        var res = deepick(source, partten)
+
+        console.log(res)
+    </script>
+</body>
+</html>
