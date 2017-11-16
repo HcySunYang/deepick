@@ -1,6 +1,4 @@
-const isObject = obj => {
-  return Object.prototype.toString.call(obj) === '[object Object]'
-}
+const isObject = obj => Object.prototype.toString.call(obj) === '[object Object]'
 
 export default function deepPick (source, partten) {
   if (Array.isArray(partten)) {
