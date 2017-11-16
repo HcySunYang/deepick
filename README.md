@@ -14,6 +14,12 @@ The data returned by the interface often contains some useless information, some
 npm install --save deepick
 ```
 
+#### yarn
+
+```
+yarn add deepick
+```
+
 `deepick` released as a `umd` module. You can use it in any way for your favorite. You can get global variable `deepick` by serving as `<script>` tag.
 
 ## Usage
