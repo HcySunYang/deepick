@@ -40,6 +40,7 @@
                         price: '$19',
                         ctime: 1332373220,
                         utime: 1412571020,
+                        notInSource: null
                     },
                     {
                         id: 201,
@@ -61,13 +62,18 @@
                     {
                         id: 'id',
                         name: 'name',
-                        price: 'price'
+                        price: 'price',
+                        notInSource: {
+                            some: 'some'
+                        }
                     }
                 ]
             }
         ]
         
-        var res = deepick(source, partten)
+        var res = deepick(source, partten, {
+            warn: true
+        })
 
         console.log(res)
     </script>

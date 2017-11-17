@@ -1,6 +1,6 @@
 {
   "name": "deepick",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Pick objects according to the depth of the given pattern",
   "main": "dist/deepick.js",
   "scripts": {
