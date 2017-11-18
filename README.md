@@ -139,6 +139,51 @@ You will get a new object:
 ]
 ```
 
+If the attribute in the partten does not exist in the source object, a new property is automatically added to the new object by default:
+
+*source object:*
+
+```js
+{
+    a: 1,
+    b: 2
+}
+```
+
+*partten:*
+
+```js
+{
+    a: 'a',
+    // `c` property does not exist in the source object
+    c: 'c'
+}
+```
+
+Obtain a new object will automatically be added a new property c, the value is undefined:
+
+```js
+{
+    a: 1,
+    c: undefined
+}
+```
+
+Sometimes you do not want to use the default behavior, you can provide the third optional arguments `deepick`:
+
+```js
+const res = deepick(source, partten, {
+    warn: true
+})
+console.log(res)
+```
+
+If warn is true, you will get an error warning when the property in the schema do not exist in the source object:
+
+```
+`someProperty` is an undefined property on the source object
+```
+
 ## Contribution
 
 Contributions are welcome! Open a pull request to fix a bug, or open an issue to discuss a new feature or change.
