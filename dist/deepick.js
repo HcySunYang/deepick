@@ -4,32 +4,32 @@
 	(global.deepick = factory());
 }(this, (function () { 'use strict';
 
-const isObject = obj => Object.prototype.toString.call(obj) === '[object Object]';
-const warnUndefined = key => console.error(`\`${key}\` is an undefined property on the source object`);
+var isObject = function (obj) { return Object.prototype.toString.call(obj) === '[object Object]'; };
+var warnUndefined = function (key) { return console.error(("`" + key + "` is an undefined property on the source object")); };
 
 function deepPick (source, partten, options) {
   options = options || {};
   if (Array.isArray(partten)) {
-    const res = [];
-    source.forEach((o, i) => {
+    var res = [];
+    source.forEach(function (o, i) {
       res[i] = deepPick(o, partten[0], options);
     });
     return res
   } else if (isObject(partten)) {
-    const res = {};
-    Object.keys(partten).forEach((key) => {
+    var res$1 = {};
+    Object.keys(partten).forEach(function (key) {
       if (!Array.isArray(partten[key]) && !isObject(partten[key])) {
-        res[key] = source[key];
+        res$1[key] = source[key];
       } else {
         if (!Array.isArray(source[key]) && !isObject(source[key])) {
           options.warn && warnUndefined(key);
-          res[key] = source[key];
+          res$1[key] = source[key];
         } else {
-          res[key] = deepPick(source[key], partten[key], options);
+          res$1[key] = deepPick(source[key], partten[key], options);
         }
       }
     });
-    return res
+    return res$1
   }
 }
 
